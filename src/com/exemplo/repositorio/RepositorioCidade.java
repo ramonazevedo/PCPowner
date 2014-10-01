@@ -18,6 +18,7 @@ public class RepositorioCidade {
 		emf = Persistence.createEntityManagerFactory("pcp");
 		em = emf.createEntityManager();
 	}
+	
 
 	public void salvar(Cidade cidade){
 		em.getTransaction().begin();

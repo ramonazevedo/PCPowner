@@ -3,7 +3,10 @@ package com.exemplo.controle;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.NoneScoped;
 import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
+import javax.faces.component.UIComponent;
 
 import com.exemplo.entidade.Cidade;
 import com.exemplo.repositorio.RepositorioCidade;
@@ -19,6 +22,7 @@ public class ControleCidade {
 		repositorioCidade = new RepositorioCidade();
 	}
 	
+	
 	public String novo(){
 		cidade = new Cidade();
 		return "formularioCidade";
@@ -26,15 +30,16 @@ public class ControleCidade {
 	
 	public String salvar(){
 		repositorioCidade.salvar(cidade);
-		return "listarCidades";
+		
+		return "index";
 	}
 
-	public String editar(Cidade cidade){
-		this.cidade = cidade;
+	public String editar(){
 		return "formularioCidade";
 	}
 	
-	public String remover(Cidade cidade){
+	
+	public String remover(){
 		repositorioCidade.remover(cidade);
 		return null;
 	}

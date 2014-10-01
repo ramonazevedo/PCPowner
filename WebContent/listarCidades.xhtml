@@ -31,13 +31,15 @@
 						#{cidade.rais}
 					</h:column>
 					<h:column>
-						<h:commandLink action="#{controleCidade.editar(cidade)}">
+						<h:commandLink action="#{controleCidade.editar}">
 							<span class="icon-pencil"></span>
+							<f:setPropertyActionListener target="#{controleCidade.cidade}" value="#{cidade}"/>
 							Editar
 						</h:commandLink>
 						/
-						<h:commandLink action="#{controleCidade.remover(cidade)}">
+						<h:commandLink action="#{controleCidade.remover}">
 							<span class="icon-trash"></span>
+							<f:setPropertyActionListener target="#{controleCidade.cidade}" value="#{cidade}"/>
 							Remover
 						</h:commandLink>
 					</h:column>
