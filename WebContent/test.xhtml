@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<body>
+	<form action="">
+		<p:dialog header="Mensagens" id="dialogMensagens"
+			widgetVar="dialogMensagens" modal="true" height="150" width="500"
+			resizable="false">
+			<h:messages id="msg2" errorStyle="font-weight:bold; color:red;"
+				infoStyle="font-weight:bold; color:green; " />
+		</p:dialog>
+		
+		<p:commandButton value="AA" onclick="dialogMensagens.show()">
+		
+		</p:commandButton>
+	</form>
+</body>
+</html>
